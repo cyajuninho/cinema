@@ -21,9 +21,6 @@ public class Session {
     @Column(name = "date")
     private LocalDate date;
 
-    @Column(name = "time")
-    private String time;
-
     @Column(name = "price")
     private double price;
 
@@ -51,14 +48,6 @@ public class Session {
 
     public void setDate(LocalDate date) {
         this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
     }
 
     public double getPrice() {
