@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CinemaApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("spring.jpa.hibernate.ddl-auto", "update");
 
         SpringApplication.run(CinemaApplication.class, args);
 	}
-
 }
