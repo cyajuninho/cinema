@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class SessionController {
      * @return Session com status 200
      */
     @PostMapping("/save")
-    public ResponseEntity<Session> saveSession(Session session) {
+    public ResponseEntity<Session> saveSession(@RequestBody Session session) {
         return ResponseEntity.ok(sessionService.saveSession(session));
     }
 
